@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Citrus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+
+    body {
+      margin: 0;
+      display: grid;
+      font-family: sans-serif;
+      grid-template-columns: repeat(5, 1fr);
+      font-size: 1.3em;
+    }
+
+    header {
+      color: #fff;
+      padding: 20px;
+      background-color: var(--secondary-color);
+      text-align: center;
+      color: var(--primary-color);
+      grid-column: 1 / 6;
+    }
+
+    main {
+      padding: 20px;      
+    }
+
+    .main-block {
+      padding: 20px;
+      color: var(--primary-color);
+      background-color: #000000;
+      width: 400px;
+    }
+
+    .icon{
+      display: flex;
+      align-items: center;
+
+    }
+
+    img {
+      max-width: 50%;
+      height: auto;
+      height: auto;
+      width: auto;
+    }
+
+    .icon-text{
+      display: flex;
+      font-size: 1.8em;
+      padding-top: 30px;
+
+    }
+
+    footer {
+      color: var(--primary-color);
+      padding: 20px;
+      text-align: center;
+      background-color: var(--secondary-color);
+      grid-column: 1 / 6;
+    }
+
+    .grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+
+
+@media (max-width:768px){
+  .icon{
+    flex-direction: column-reverse;
+  }
+}
+/* Pour les écrans de taille supérieure à 576px, cette classe modifie la grille pour qu'elle contienne deux colonnes fractionnées, ce qui signifie que les éléments de la grille occuperont deux colonnes chacun. */
+@media (min-width: 576px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Pour les écrans de taille supérieure à 768px, cette classe modifie la grille pour qu'elle contienne trois colonnes fractionnées, ce qui signifie que les éléments de la grille occuperont trois colonnes chacun. */
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Pour les écrans de taille supérieure à 992px, cette classe modifie la grille pour qu'elle contienne quatre colonnes fractionnées, ce qui signifie que les éléments de la grille occuperont quatre colonnes chacun. */
+@media (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Pour les écrans de taille supérieure à 1200px, cette classe modifie la grille pour qu'elle contienne six colonnes fractionnées, ce qui signifie que les éléments de la grille occuperont six colonnes chacun. */
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.grid-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+      .main-block {
+        height: 200px;
+      }
+    
+      :root {
+      --primary-color: #C8642D;
+      --secondary-color: #37468D;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="icon">
+       <img src="ico.png" alt="">
+       <h1 class="icon-text">Citrus</h1>
+    </div>
+    <p style="padding-top: 25px;">Révélez votre beauté naturelle avec nos produits de qualité supérieure.</p>
+  </header>
+
+  <main>
+    <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <main class="grid-container">
+        <div class="grid-item">Block 1</div>
+        <div class="grid-item">Block 2</div>
+        <div class="grid-item">Block 3</div>
+        <div class="grid-item">Block 4</div>
+        <div class="grid-item">Block 5</div>
+        <div class="grid-item">Block 6</div>
+      </main>
+    </div>
+  </div>
+</div>
+
+  </main>
+
+  <footer>
+    Test footer
+  </footer>
+</body>
+</html>
