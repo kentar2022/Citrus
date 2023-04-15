@@ -1,19 +1,15 @@
 body{
-      margin: 0;
-      font-family: sans-serif;
-      font-size: 1.3em;
-    }
-
-.icon{
-      display: flex;
-      align-items: center;
-    }
-
-.icon-text{
-    display: flex;
-    font-size: 1.8em;
-    padding-top: 30px;
+  margin: 0;
+  font-size: 1.3em;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.15em;
 }
+
+h3:first-child{
+  color: var(--secondary-color);
+}
+
+
 
 
 /*Header */    
@@ -33,12 +29,37 @@ header {
    padding: 20px;
 }
 
-.main-container div {
+
+.main-container div:first-child{
   background-color: var(--primary-color);
-  border: 1px solid White;
+}
+
+.main-container div:nth-child(2){
+  background-color: var(--secondary-color);
+}
+
+
+.main-container div {
   padding: 20px;
   text-align: center;
   color: white;
+}
+
+.grid-item{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.grid-item span{
+  width:60%;
+}
+
+@media screen and (max-width: 950px){
+.grid-item span{
+  width:80%;
+}
 }
 
 
@@ -50,26 +71,111 @@ footer {
   background-color: var(--secondary-color);
   grid-column: 1 / 6;
 }
-    
+
+
+footer {
+  background-color: #f8f8f8;
+
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-info, .footer-payment {
+  flex-basis: 50%;
+}
+
+.footer-copy {
+  text-align: center;
+}
+
 
 /*Media queries*/
-@media (min-width: 576px) {
-  .main-container {
-  grid-template-columns: repeat(2, 1fr);
-   }
+
+@media screen and (min-width: 1000px) {
+   .grid-item img{
+    width:30%;
+  }
+
 }
 
-@media (min-width: 768px) {
-  .main-container {
-  grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
       .icon{
       justify-content: center
     }      
 }
+
+@media screen and (max-width: 576px) {
+  .main-container {
+  grid-template-columns: repeat(1, 1fr);
+   }
+   body{
+    max-width:576px;
+   }
+}
+
+.citrus-main_image{
+  width:70%;
+  padding: 20px 0px 20px 0px;
+}
+
+.tube-plastique{
+  width: 50%;
+}
+
+.tubes-peinture{
+  width:98%;
+}
+
+.recipient-beurre.png{
+  width:98%;
+}
+
+.icon{
+  display: flex;
+  align-items: center;
+}
+
+.icon-text{
+    display: flex;
+    font-size: 1.8em;
+    padding-top: 30px;
+}
+
+
+/*
+@media (min-width: 768px) {
+  .main-container {
+  grid-template-columns: repeat(1, 1fr);
+    }
+  body{
+    max-width:768px;
+   }
+}
+
+@media (min-width: 600px) {
+  .main-container {
+  grid-template-columns: repeat(1, 1fr);
+    }
+  body{
+    max-width:768px;
+   }
+}
+
+@media (min-width: 769px) {
+  .main-container {
+  grid-template-columns: repeat(1, 1fr);
+    }
+  body{
+    max-width:769px;
+   }
+}
+
+
+
 
 @media (min-width: 992px) {
       .main-container {
@@ -81,7 +187,7 @@ footer {
   .main-container {
   grid-template-columns: repeat(6, 1fr);
   }
-}
+}*/
 
 :root {
   --primary-color: #C8642D;
