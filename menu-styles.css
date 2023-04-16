@@ -5,7 +5,7 @@
   background-color: #ffffff;
   color: var(--secondary-color); 
   border: 1px solid #000;
-  padding: 10px;
+  padding: 20px;
 }
 
 .triangle {
@@ -33,6 +33,7 @@
   display: flex;
   list-style: none;
   padding: 10px;
+  display: ;
 }
 
 .menu ul li:hover {

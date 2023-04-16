@@ -144,6 +144,20 @@ footer {
     font-size: 1.8em;
     padding-top: 30px;
 }
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 10px; 
+}
+
+.image-grid-item {
+  margin-bottom: 10px; 
+}
+
+.image-grid-item img {
+  width: 100%; 
+  height: auto; 
+}
 
 
 /*
