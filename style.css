@@ -144,21 +144,49 @@ footer {
     font-size: 1.8em;
     padding-top: 30px;
 }
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  grid-gap: 10px; 
+
+
+.grid-item img {
+  width: 30%;
 }
 
-.image-grid-item {
-  margin-bottom: 10px; 
+.image div img{
+  height: auto;
 }
 
-.image-grid-item img {
-  width: 100%; 
-  height: auto; 
+
+@media (max-width: 670px) {
+  body {
+  min-width: 670px;
+    }
 }
 
+
+@media (min-width: 1200px){
+  .first-element{
+    width:70%;
+    align-items: flex-start;
+  }
+
+  .second-element{
+    display: flex;
+    width:55%;
+    margin-left: 42%;
+  }
+
+  .grid-item{
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .recipient-beurre{
+     margin-left: 15%;
+  }
+
+  .citrus-main_image{
+    margin-left: 15%;
+  }
+}
 
 /*
 @media (min-width: 768px) {
@@ -170,15 +198,7 @@ footer {
    }
 }
 
-@media (min-width: 600px) {
-  .main-container {
-  grid-template-columns: repeat(1, 1fr);
-    }
-  body{
-    max-width:768px;
-   }
-}
-
+/*
 @media (min-width: 769px) {
   .main-container {
   grid-template-columns: repeat(1, 1fr);
