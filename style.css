@@ -188,40 +188,6 @@ footer {
   }
 }
 
-/*
-@media (min-width: 768px) {
-  .main-container {
-  grid-template-columns: repeat(1, 1fr);
-    }
-  body{
-    max-width:768px;
-   }
-}
-
-/*
-@media (min-width: 769px) {
-  .main-container {
-  grid-template-columns: repeat(1, 1fr);
-    }
-  body{
-    max-width:769px;
-   }
-}
-
-
-
-
-@media (min-width: 992px) {
-      .main-container {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (min-width: 1200px) {
-  .main-container {
-  grid-template-columns: repeat(6, 1fr);
-  }
-}*/
 
 :root {
   --primary-color: #C8642D;
