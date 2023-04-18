@@ -5,20 +5,51 @@ body{
   letter-spacing: 0.15em;
 }
 
-h3:first-child{
-  color: var(--secondary-color);
-}
-
-
-
-
 /*Header */    
 header {
-      padding: 20px;
-      background-color: var(--secondary-color);
-      text-align: center;
-      color: var(--primary-color);
-    }
+  padding: 20px;
+  background-color: var(--secondary-color);
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/*L'évenement*/
+
+.event{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-color);
+  width:60%;
+  border-radius: 20px;
+  margin: 5% 0px 5% 20%;
+  padding: 30px;
+  color: #ffffff;
+  animation: event 2s infinite;
+  text-decoration: none;
+}
+
+.event:hover {
+  animation: none;
+}
+
+a:hover{
+  color: var(--primary-color);
+ 
+}
+ 
+@keyframes event {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
 
 
 /*Le container*/    
@@ -29,7 +60,6 @@ header {
    padding: 20px;
 }
 
-
 .main-container div:first-child{
   background-color: var(--primary-color);
 }
@@ -37,7 +67,6 @@ header {
 .main-container div:nth-child(2){
   background-color: var(--secondary-color);
 }
-
 
 .main-container div {
   padding: 20px;
@@ -51,15 +80,20 @@ header {
   flex-direction: column;
 }
 
+main:first-child {
+  background-color: var(--primary-color);
+}
 
 .grid-item span{
   width:60%;
 }
 
-@media screen and (max-width: 950px){
-.grid-item span{
-  width:80%;
+.grid-item img {
+  width: 50%;
 }
+
+h3:first-child{
+  color: var(--secondary-color);
 }
 
 
@@ -72,16 +106,9 @@ footer {
   grid-column: 1 / 6;
 }
 
-
 footer {
   background-color: #f8f8f8;
 
-}
-
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .footer-info, .footer-payment {
@@ -94,6 +121,12 @@ footer {
 
 
 /*Media queries*/
+
+@media screen and (max-width: 950px){
+.grid-item span{
+  width:80%;
+}
+}
 
 @media screen and (min-width: 1000px) {
    .grid-item img{
@@ -117,48 +150,18 @@ footer {
    }
 }
 
-.citrus-main_image{
-  width:70%;
-  padding: 20px 0px 20px 0px;
-}
-
-.tube-plastique{
-  width: 50%;
-}
-
-.tubes-peinture{
-  width:98%;
-}
-
-.recipient-beurre.png{
-  width:98%;
-}
-
-.icon{
-  display: flex;
-  align-items: center;
-}
-
-.icon-text{
-    display: flex;
-    font-size: 1.8em;
-    padding-top: 30px;
-}
-
-
-.grid-item img {
-  width: 30%;
-}
-
-.image div img{
-  height: auto;
-}
-
 
 @media (max-width: 670px) {
   body {
   min-width: 670px;
     }
+}
+
+@media screen and (min-width: 1200px){
+.third-element{
+  width:800px;
+  background-color: var(--primary-color);
+}
 }
 
 
@@ -189,11 +192,51 @@ footer {
 }
 
 
+/*Les images*/
+.citrus-main_image{
+  width:70%;
+  padding: 20px 0px 20px 0px;
+}
+
+.tube-plastique{
+  width: 50%;
+}
+
+.tubes-peinture{
+  width:98%;
+}
+
+.recipient-beurre.png{
+  width:98%;
+}
+
+.icon{
+  display: flex;
+  align-items: center;
+}
+
+.icon-text{
+  display: flex;
+  font-size: 1.8em;
+  padding-top: 30px;
+}
+.image div img{
+  height: auto;
+}
+
+
 :root {
   --primary-color: #C8642D;
   --secondary-color: #37468D;
 }
 
-main:first-child {
-  background-color: var(--primary-color);
-}
+/*D’abord j’ai créé les éléments principaux du site : "header, l‘ «élement main avec main-container dedant  et footer", en utilisant CSS Grid j’ai fait une grille, dont les propriétés j’ai changé avec les media queries pour rendre le site responsive, et l’adapté pour les grands écrans.  Ensuite, quand le squelette du site était prêt, je l’ai stylisé en utilisant des images thématiques et choisissant les couleurs primaires que j'ai fixé à l'aide des propriétés bootstrap primary-color et secondary-color, et ensuite appelé aux bons endroits à l'aide de la fonction javascript var.
+
+
+
+
+
+    2. Précisez les moyens utilisés. Expliquez tout ce dont vous avez eu besoin pour réaliser vos tâches : langages de programmation, frameworks, outils, logiciels, documentations techniques, etc...
+
+J’ai utilisé Sublime Text 3 pour éditeur de texte. Les langages utilisées sont HTML/CSS/Bootstrap, j’ai aussi utilisé un peu de Javascript pour dynamiser le bouton de menu. Avec Grid et Flexbox j’ai positionné les éléments du site, avec les media queries je l’ai fait responsive, et avec Bootstrap je l’ai stylisé. Les images j’ai prix sur freepik.com et brandmark.io. Pour l’hébergement des modifications dans Git j’ai utilisé Github.
+*/
